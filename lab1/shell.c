@@ -227,8 +227,6 @@ bool execute_internal_command(char *tokens[], int token_count, char *output_file
 
         closedir(dir);
 
-        // Сортировка результата
-        qsort(filenames, files_cnt, sizeof(char *), compare_filenames);
         for (int i = 0; i < files_cnt; i++)
         {
             printf("%s\n", filenames[i]);
